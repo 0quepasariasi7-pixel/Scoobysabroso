@@ -49,6 +49,28 @@
         .day-style {
             border: 1px solid rgba(255, 255, 255, 0.2);
         }
+
+        /* Ripple effect */
+        .ripple {
+            position: relative;
+            overflow: hidden;
+            transform: translate3d(0, 0, 0); /* Helps contain the ripple */
+        }
+
+        .ripple-effect {
+            position: absolute;
+            border-radius: 50%;
+            transform: scale(0);
+            animation: ripple-animation 600ms linear;
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+
+        @keyframes ripple-animation {
+            to {
+                transform: scale(4);
+                opacity: 0;
+            }
+        }
         
         /* Definitive Print Styles */
         @media print {
@@ -132,14 +154,12 @@
 <script type="importmap">
 {
   "imports": {
-    "react": "https://esm.sh/react@18.2.0",
-    "react/jsx-runtime": "https://esm.sh/react@18.2.0/jsx-runtime",
-    "react-dom/client": "https://esm.sh/react-dom@18.2.0/client",
     "@google/genai": "https://esm.sh/@google/genai",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
     "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
     "react/": "https://aistudiocdn.com/react@^19.2.0/",
-    "vite": "https://aistudiocdn.com/vite@^7.2.1",
-    "@vitejs/plugin-react": "https://aistudiocdn.com/@vitejs/plugin-react@^5.1.0"
+    "vite": "https://aistudiocdn.com/vite@^7.2.2",
+    "@vitejs/plugin-react": "https://aistudiocdn.com/@vitejs/plugin-react@^5.1.1"
   }
 }
 </script>
