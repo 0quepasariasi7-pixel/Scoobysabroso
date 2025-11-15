@@ -1,19 +1,19 @@
 import React, { useState, useCallback, useEffect } from 'react';
-import { TOTAL_PAGES as DEFAULT_TOTAL_PAGES } from './constants';
-import Navigation from './components/Navigation';
-import Header from './components/Header';
-import Page1Hero from './components/Page1Hero';
-import Page2Churrascos from './components/Page2Churrascos';
-import Page3Fajitas from './components/Page3Fajitas';
-import Page4DrinksSocials from './components/Page4DrinksSocials';
-import Page5Custom from './components/Page5Custom'; // Renders any custom page
-import PrintableView from './components/PrintableView';
-import MysteryAssistantButton from './components/MysteryAssistantButton';
-import MysteryAssistant from './components/MysteryAssistant';
-import { FinalizedOrder, PartialOrder, MenuData } from './types';
-import OrderConfirmation from './components/OrderConfirmation';
-import PastOrders from './components/PastOrders';
-import { menuService } from './services/menuService';
+import { TOTAL_PAGES as DEFAULT_TOTAL_PAGES } from './constants.ts';
+import Navigation from './components/Navigation.tsx';
+import Header from './components/Header.tsx';
+import Page1Hero from './components/Page1Hero.tsx';
+import Page2Churrascos from './components/Page2Churrascos.tsx';
+import Page3Fajitas from './components/Page3Fajitas.tsx';
+import Page4DrinksSocials from './components/Page4DrinksSocials.tsx';
+import Page5Custom from './components/Page5Custom.tsx';
+import PrintableView from './components/PrintableView.tsx';
+import MysteryAssistantButton from './components/MysteryAssistantButton.tsx';
+import MysteryAssistant from './components/MysteryAssistant.tsx';
+import { FinalizedOrder, PartialOrder, MenuData } from './types.ts';
+import OrderConfirmation from './components/OrderConfirmation.tsx';
+import PastOrders from './components/PastOrders.tsx';
+import { menuService } from './services/menuService.ts';
 
 const App: React.FC = () => {
   const [currentPage, setCurrentPage] = useState<number>(1);
