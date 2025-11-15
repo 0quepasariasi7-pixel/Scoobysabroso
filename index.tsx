@@ -2,7 +2,7 @@ import React, { Suspense } from 'react';
 import { createRoot } from 'react-dom/client';
 import App from './App';
 
-const AdminPanel = React.lazy(() => import('./components/AdminPanel'));
+const AdminPanel = React.lazy(() => import('./components/AdminPanel.tsx'));
 
 const urlParams = new URLSearchParams(window.location.search);
 const isAdminRoute = urlParams.get('admin') === 'true';
