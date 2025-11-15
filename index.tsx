@@ -1,8 +1,7 @@
-import React, { Suspense } from 'react';
+import React from 'react';
 import { createRoot } from 'react-dom/client';
 import App from './App';
-
-const AdminPanel = React.lazy(() => import('./components/AdminPanel.tsx'));
+import AdminPanel from './components/AdminPanel.tsx';
 
 const urlParams = new URLSearchParams(window.location.search);
 const isAdminRoute = urlParams.get('admin') === 'true';
@@ -13,9 +12,7 @@ if (isAdminRoute) {
     const root = createRoot(adminRootElement);
     root.render(
       <React.StrictMode>
-        <Suspense fallback={<div style={{ color: 'white', padding: '2rem', textAlign: 'center' }}>Cargando panel de administrador...</div>}>
-          <AdminPanel />
-        </Suspense>
+        <AdminPanel />
       </React.StrictMode>
     );
   }
